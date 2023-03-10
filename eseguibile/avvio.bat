@@ -1,0 +1,1 @@
+java -jar "GestionaleOnStage-0.0.1 - PreRealese-jar-with-dependencies.jar"
