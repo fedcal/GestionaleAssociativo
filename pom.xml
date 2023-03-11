@@ -4,7 +4,7 @@
 
     <groupId>com</groupId>
     <artifactId>GestionaleOnStage</artifactId>
-    <version>0.0.1 - PreRealese</version>
+    <version>0.0.1-PreRealese-SNAPSHOT</version>
     <name>GestionaleOnStage</name>
     <description>Gestionale di per l'organizzazione dei soci, degli eventi e dell'organizzazione economica di un'associazione</description>
     <packaging>jar</packaging>
