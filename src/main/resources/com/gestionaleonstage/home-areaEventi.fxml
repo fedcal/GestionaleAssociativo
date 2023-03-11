@@ -7,7 +7,7 @@
 <AnchorPane fx:id="areaEventi" prefHeight="185.0" prefWidth="319.0" style="-fx-border-color: black;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.gestionaleonstage.eventi.ControllerEventi">
     <children>
         <Label layoutX="125.0" layoutY="6.0" text="Area Eventi" />
-        <Button fx:id="btnTipologiaEvento" layoutX="8.0" layoutY="46.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="128.0" text="Tipologia Eventi" />
+        <Button fx:id="btnTipologiaEvento" layoutX="8.0" layoutY="46.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="128.0" text="Tipologia Eventi" onAction="#viewTipologia" />
         <Button fx:id="btnVisualizzaEventi" layoutX="185.0" layoutY="46.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="128.0" text="Visualizza Info Eventi" />
         <Button fx:id="btnModificaEventi" layoutX="185.0" layoutY="119.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="128.0" text="Modifica info Evento" />
         <Button fx:id="btnAvviaBloccaEvento" layoutX="8.0" layoutY="119.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="128.0" text="Avvia/Blocca Evento" />
