@@ -32,5 +32,3 @@ jobs:
 
       - name: Publish to Github Pages
         run: mvn --batch-mode deploy
-        env:
-          TOKEN: ${{ secrets.TOKEN }}
