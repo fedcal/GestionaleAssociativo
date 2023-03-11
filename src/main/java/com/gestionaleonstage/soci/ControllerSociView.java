@@ -30,95 +30,41 @@ public class ControllerSociView implements Initializable {
     private final TreeMap<Integer,String> elencoRuoli = new TreeMap<>();
     @FXML
     private Label ruoloSocio;
-    /**
-     * fx:id legato alla ListView in cui vengono visualizzati tutti i soci
-     */
     @FXML
     private ListView listaSociView;
-    /**
-     * fx:id relativo al Label per visualizzare il numero della tessera
-     */
     @FXML
     private Label tessera;
-    /**
-     * fx:id relativo al Label per visualizzare il nome del socio
-     */
     @FXML
     private Label nome;
-    /**
-     * fx:id relativo al Label per visualizzare il cognome del
-     */
     @FXML
     private Label cognome;
-    /**
-     * fx:id relativo al Label per visualizzare la data di nascita il socio
-     */
     @FXML
     private Label dataNascita;
-    /**
-     * fx:id relativo al Label per visualizzare la città di nascita del socio
-     */
     @FXML
     private Label luogoNascita;
-    /**
-     * fx:id relativo al Label per visualizzare l'indirizzo incui risiede il socio
-     */
     @FXML
     private Label indirizzo;
-    /**
-     * fx:id relativo al Label per visualizzare la città in cui risiede il socio
-     */
     @FXML
     private Label citta;
-    /**
-     * fx:id relativo al Label per visualizzare il cap della città in cui risiede il socio
-     */
     @FXML
     private Label cap;
-    /**
-     * fx:id relativo al Label per visualizzare la provincia in cui risiede il socio
-     */
     @FXML
     private Label provincia;
-    /**
-     * fx:id relativo al Label per visualizzare l'email del socio
-     */
     @FXML
     private Label email;
-    /**
-     * fx:id relativo al Label per visualizzare il numero di cellulare del socio
-     */
     @FXML
     private Label cellulare;
-    /**
-     * fx:id relativo al Label per visualizzare se il socio ha prestato il consenso per il trattamento dei dati
-     */
     @FXML
     private Label consensoDati;
-    /**
-     * fx:id relativo al Label per visualizzare se il socio è minorenne o meno
-     */
     @FXML
     private Label minorenne;
-    /**
-     * fx:id relativo al Label per visualizzare la data di annullamento dell'iscrizione del socio
-     */
     @FXML
     private Label dataAnnullamento;
-    /**
-     * fx:id relativo al Label per visualizzare la data di iscrizione del socio
-     */
     @FXML
     private Label dataIscrizione;
-    /**
-     * fx:id relativo al Label per visualizzare le note relative al socio
-     */
     @FXML
     private Label note;
 
-    /**
-     * Funzione che visualizza i dati del socio selezionato
-     */
     @FXML
     private void infoSocio(){
         if(listaSociView.getSelectionModel().getSelectedItem()==null){
@@ -157,12 +103,6 @@ public class ControllerSociView implements Initializable {
             }
         }
     }
-
-    /**
-     * Inizializza gli attributi di classe
-     * @param url URL Url relativo al file xml relativo all'interfaccia grafica
-     * @param resourceBundle ResourceBundle
-     */
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         this.cap.setText("");

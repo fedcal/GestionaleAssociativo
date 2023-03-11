@@ -8,31 +8,13 @@ import java.sql.Statement;
 import java.util.LinkedList;
 
 
-/**
- * Classe che racchiude tutti gli elementi di una tabella
- */
 public class TableData {
-    /**
-     * Connessione al database
-     */
-    private DbConnection db;
 
-    /**
-     * Costruttore di classe che valorizza l'attributo di classe
-     * @param db DbConnection rappresentante la connessione al database
-     */
+    private DbConnection db;
     public TableData(DbConnection db) {
         this.db = db;
     }
 
-    /**
-     * Metodo per ottenere tutte le transazioni di una tabella
-     * @param query String rappresentante la query da eseguire
-     * @param table String rappresentante il nome della tabella di cui bisogna ottenere lo schema
-     * @return LinkedList {@literal <Example>} lista di Example rappresentante ogni riga della tabella
-     * @throws SQLException Genera un SQLException se la query non viene eseguita correttamente
-     * @throws EmptySetException Genera un EmptySetException se la tabella è vuota
-     */
     public LinkedList<Example> getTransazioni(String query, String table) throws SQLException, EmptySetException {
         LinkedList<Example> transazioni= new LinkedList<>();
         Statement statement= this.db.getConnection().createStatement();

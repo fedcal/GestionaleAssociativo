@@ -10,14 +10,7 @@ import org.junit.Test;
 import java.sql.*;
 import java.util.LinkedList;
 
-/**
- * Classe per testare le funzionalità legate al database
- */
 public class DatabaseTest {
-    /**
-     * Test relativo all'inserimento di un socio all'interno del database
-     * @throws SQLException può generare un eccezione di tipo SQL
-     */
     @Test
     public void insert() throws SQLException {
         DbConnection dbConnection=new DbConnection();
@@ -29,10 +22,6 @@ public class DatabaseTest {
         dbConnection.closeConnection();
     }
 
-    /**
-     * Test relativo alle informazioni che si possono ottenere dallo schema di una tabella recuperata dal database
-     * @throws SQLException può generare un eccezione di tipo SQL
-     */
     @Test
     public void schema() throws SQLException{
         DbConnection dbConnection=new DbConnection();
@@ -49,11 +38,6 @@ public class DatabaseTest {
         dbConnection.closeConnection();
     }
 
-    /**
-     * Test relativo alle transazioni ottenute dalla tabella del database
-     * @throws SQLException può generare un eccezione di tipo SQL
-     * @throws EmptySetException eccezione generata se la tabella non contiene transazioni
-     */
     @Test
     public void getTransazioniTest() throws SQLException, EmptySetException {
         LinkedList<Example> trans=new LinkedList<>();

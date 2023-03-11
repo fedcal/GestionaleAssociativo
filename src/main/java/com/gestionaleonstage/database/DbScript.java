@@ -4,21 +4,11 @@ import java.sql.Connection;
 import java.sql.SQLException;
 import java.sql.Statement;
 
-/**
- * Classe dedicata agli script per la gestione del database, dalla creazione delle tabelle alla loro modifica ed eliminazione
- */
+
 public class DbScript {
-    /**
-     * Costruttore di classe di default
-     */
+
     public DbScript(){}
 
-    /**
-     * Inizializzazione della tabella soci
-     *
-     * @param db Connection - connessione al db
-     * @return
-     */
     public static final void initTable(Connection db) {
         int rs;
         try (Statement statement = db.createStatement()) {
@@ -221,13 +211,6 @@ public class DbScript {
         }
     }
 
-    /**
-     * Metodo per eseguire query sul db che inseriscono, modificano o elimina alcuni campi nel database
-     * @param query String query sql da eseguire
-     * @param db Connection connessione al database
-     * @return boolean Se la query è stata eseguita
-     * @throws SQLException può lanciare questa eccezione se la query non viene eseguita correttamente
-     */
     public boolean triggerQuery(String query, Connection db) throws SQLException {
         boolean queryDone=false;
         Statement statement=db.createStatement();

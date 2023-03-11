@@ -6,6 +6,7 @@
     <artifactId>GestionaleOnStage</artifactId>
     <version>0.0.1 - PreRealese</version>
     <name>GestionaleOnStage</name>
+    <description>Gestionale di per l'organizzazione dei soci, degli eventi e dell'organizzazione economica di un'associazione</description>
     <packaging>jar</packaging>
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -139,4 +140,13 @@
             </plugin>
         </plugins>
     </build>
+
+    <distributionManagement>
+        <repository>
+            <id>github</id>
+            <name>GitHub Packages</name>
+            <url>https://maven.pkg.github.com/fedcal/GestionaleAssociativo</url>
+        </repository>
+    </distributionManagement>
+
 </project>

@@ -14,15 +14,9 @@ import javafx.stage.Stage;
 import java.io.IOException;
 import java.sql.SQLException;
 
-/**
- * Controller relativo alla sezione di sviluppo dedita alla gestione di account e impostazioni del sistema
- */
 public class ControllerSviluppo {
     @FXML
     private Button btnCreateDb;
-    /**
-     * fx:id del pulsante relativo alla sotto sezione del database
-     */
     @FXML
     private Button btnSetupDb;
 

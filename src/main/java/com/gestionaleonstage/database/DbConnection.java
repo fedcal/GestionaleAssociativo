@@ -16,31 +16,17 @@ import org.json.simple.parser.JSONParser;
 import org.json.simple.parser.ParseException;
 
 
-/**
- * Classe di supporto per la connessione al database
- */
+
 public class DbConnection {
-    /** Driver esterno per la gestione del database*/
     private static String DRIVER_CLASS_NAME;
-    /** Nome del DBMS**/
     private String DBMS = "";
-    /**Contiene l'identificativo del server su cui risiede la base di dati*/
     private String SERVER = "";
-    /**Contiene il nome della base di dati*/
     private String DATABASE = "";
-    /**La porta su cui il DBMS MySQL accetta le connessioni*/
     private int PORT = 3306;
-    /**Contiene il nome dell'utente per l'accesso alla base di dati*/
     private String USER_ID = "";
-    /**Contiene la password di autenticazione per l'utente identificato da USER_ID*/
     private String PASSWORD = "";
-    /**Connettore al database*/
     private Connection conn;
 
-    /**
-     * Costruttore di classe che istanzia la connessione al database. Può generare un'eccezione di tip SQL
-     * se non riesce a connettersi o di altro tipo se non riesce a trovare il driver o non ha i permessi per accedere
-     */
     public DbConnection(){
 
         JSONParser jsonParser = new JSONParser();
@@ -73,18 +59,10 @@ public class DbConnection {
         }
     }
 
-    /**
-     * Metodo per ottenere la connessione al DB
-     * @return Connection
-     */
     public Connection getConnection() {
         return this.conn;
     }
 
-    /**
-     * Metodo per la chiusura della connessione al database e del rilascio delle risorse
-     * @throws SQLException Il metodo genera questa eccezione nel caso in cui non riesce a lanciare l'applicazione
-     */
     public void closeConnection() throws SQLException {
         this.conn.close();
     }

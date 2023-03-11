@@ -20,14 +20,7 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.util.LinkedList;
 
-/**
- * Controller Soci
- */
 public class ControllerSoci {
-      /**
-     * Funzione per aprire la view relativa all'aggiunta di un socio
-     * @throws IOException Exception generata in caso non viene trovato il file FXML relativo
-     */
     @FXML
     private void addSoci() throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(HomeApplication.class.getResource("sociArea/areaSoci-add.fxml"));
@@ -39,10 +32,6 @@ public class ControllerSoci {
         stage.show();
     }
 
-    /**
-     * Funzione per aprire la view relativa alla visualizzazione di un socio
-     * @throws IOException Exception generata in caso non viene trovato il file FXML relativo
-     */
     @FXML
     private void visualizzaSoci() throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(HomeApplication.class.getResource("sociArea/areaSoci-view.fxml"));
@@ -54,9 +43,6 @@ public class ControllerSoci {
         stage.show();
     }
 
-    /**
-     * Metodo per visualizzare la vista per modificare i soci
-     */
     public void modificaSoci( ) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(HomeApplication.class.getResource("sociArea/areaSoci-modify.fxml"));
         Parent root = fxmlLoader.load();
