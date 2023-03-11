@@ -57,16 +57,32 @@ public class DbScript {
             }
 
             try {
-                //TIPO EVENTO
-                String queryTipoEvento = "CREATE TABLE IF NOT EXISTS tipo_evento(id_evento int PRIMARY KEY, nome varchar(150), descrizione varchar(500))";
-                rs = statement.executeUpdate(queryTipoEvento);
+                //TIPOLOGIA EVENTO
+                String queryTipologiaEvento = "CREATE TABLE IF NOT EXISTS tipologia_evento(id_tipologia int PRIMARY KEY, nome_tipologia varchar(150), descrizione varchar(500))";
+                rs = statement.executeUpdate(queryTipologiaEvento);
             }catch (Exception e){
-                System.out.println("Impossibile inizializzare la tabella dei tipi degli eventi.\n");
+                System.out.println("Impossibile inizializzare la tabella dei format degli eventi.\n");
+            }
+
+            try {
+                //CARICA TIPOLOGIA EVENTO
+                String queryLoadRuoli = "INSERT INTO tipologia_evento VALUES (0,\"Evento Singolo\",\" Evento che non si ripete con una certa freqienza \"),(1,\"2 settimane\", \" Evento che si ripete ogni 2 settimane\"),(2, \"Mensilmente\", \"Evento che si ripete una volta al mese\"),(3,\"Annuale\",\"Evento che si ripete una volta all'anno\")";
+                rs = statement.executeUpdate(queryLoadRuoli);
+            }catch (Exception e){
+                System.out.println("Impossibile caricare i vari ruoli all'interno della tabella relativa.\n");
+            }
+
+            try {
+                //FORMAT EVENTO
+                String queryFormatEvento = "CREATE TABLE IF NOT EXISTS format_evento(id_format int PRIMARY KEY, nome varchar(150), descrizione varchar(500), fk_tipologia_evento int, FOREIGN KEY (fk_tipologia_evento) REFERENCES tipologia_evento(id_tipologia))";
+                rs = statement.executeUpdate(queryFormatEvento);
+            }catch (Exception e){
+                System.out.println("Impossibile inizializzare la tabella dei format degli eventi.\n");
             }
 
             try {
                 //EVENTO CREATO
-                String queryEventoCreato = "CREATE TABLE IF NOT EXISTS evento_creato(id_creato int PRIMARY KEY, fk_evento int, data varchar(20), FOREIGN KEY (fk_evento) REFERENCES tipo_evento(id_evento))";
+                String queryEventoCreato = "CREATE TABLE IF NOT EXISTS evento_creato(id_creato int PRIMARY KEY, fk_format int, data varchar(20), FOREIGN KEY (fk_format) REFERENCES format_evento(id_format))";
                 rs = statement.executeUpdate(queryEventoCreato);
             }catch (Exception e){
                 System.out.println("Impossibile inizializzare la tabella \" evento_creato \".\n");
