@@ -4,12 +4,11 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.layout.AnchorPane?>
 
-
 <AnchorPane prefHeight="185.0" prefWidth="335.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.gestionaleonstage.eventi.ControllerTipologiaEventi">
    <children>
-      <Button fx:id="aggiungiTipologia" layoutX="37.0" layoutY="69.0" mnemonicParsing="false" text="Aggiungi Tipologia" />
+      <Button fx:id="aggiungiFormat" layoutX="37.0" layoutY="69.0" mnemonicParsing="false" onAction="#addFormat" text="Aggiungi Format" />
       <Label layoutX="100.0" layoutY="14.0" text="Gestione Tipologia Eventi" />
-      <Button fx:id="modificaTipologia" layoutX="175.0" layoutY="68.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="118.0" text="Modifica Tipologia" />
-      <Button fx:id="infoTipologia" layoutX="108.0" layoutY="126.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="118.0" text="Info Tipologia" />
+      <Button fx:id="modificaFormat" layoutX="175.0" layoutY="68.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="118.0" text="Modifica Format" />
+      <Button fx:id="infoFormat" layoutX="108.0" layoutY="126.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="118.0" text="Info Format" />
    </children>
 </AnchorPane>

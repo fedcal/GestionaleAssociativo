@@ -12,9 +12,13 @@ import javafx.stage.Stage;
 import java.io.IOException;
 
 public class ControllerEventi {
+    @FXML
     private Button btnAvviaBloccaEvento;
+    @FXML
     private Button btnTipologiaEvento;
+    @FXML
     private Button btnVisualizzaEventi;
+    @FXML
     private Button btnModificaEventi;
 
     public void viewTipologia() throws IOException {

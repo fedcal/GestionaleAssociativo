@@ -2,6 +2,7 @@ package com.gestionaleonstage.soci;
 
 import com.gestionaleonstage.database.DbConnection;
 import com.gestionaleonstage.database.DbScript;
+import com.gestionaleonstage.util.PopUp;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.*;
@@ -95,15 +96,9 @@ public class ControllerAreaSoci implements Initializable {
                             this.via.getText()+"','"+this.citta.getText()+"','"+this.cap.getText()+"','"+this.cellulare.getText()+"','"+this.provincia.getText()+"','"+this.email.getText()+"',"+"NULL"+",'"+consenso+"','"+minorenne+"',"+"NULL"+",'"+ruolo+"')";
                     dbScript.triggerQuery(query,dbConnection.getConnection());
                     dbConnection.closeConnection();
-                    Alert alert=new Alert(Alert.AlertType.INFORMATION);
-                    alert.setContentText("Perfetto!!! Il socio è stato aggiunto.");
-                    alert.show();
-                    clearField();
+                    PopUp.confermationAlert("Perfetto!!! Il socio è stato aggiunto.");
                 }catch (Exception e){
-                    /*Alert alert=new Alert(Alert.AlertType.ERROR);
-                    alert.setContentText("Errore!!! Non è stato possibile aggiungere il socio.");
-                    alert.show();*/
-                    e.printStackTrace();
+                    PopUp.errorAlert("Errore!!! Non è stato possibile aggiungere il socio.");
                 }
             }
         }

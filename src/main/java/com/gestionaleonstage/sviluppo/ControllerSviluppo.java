@@ -3,7 +3,7 @@ package com.gestionaleonstage.sviluppo;
 import com.gestionaleonstage.HomeApplication;
 import com.gestionaleonstage.database.DbConnection;
 import com.gestionaleonstage.database.DbScript;
-import javafx.event.ActionEvent;
+import com.gestionaleonstage.util.PopUp;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -30,8 +30,9 @@ public class ControllerSviluppo {
         stage.show();
     }
 
-    public void createDbScript() throws SQLException {
+    public void createDbScript() {
         DbConnection dbConnection= new DbConnection();
         DbScript.initTable(dbConnection.getConnection());
+        PopUp.confermationAlert("Database creato correttamente");
     }
 }
